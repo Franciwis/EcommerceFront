@@ -34,7 +34,7 @@ const Cart = () => {
 
   const createPreference = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/create_preference", {
+      const response = await axios.post("https://back-labotika.onrender.com/create_preference", {
         description: "Producto",
         price: total,
         quantity: 1,
@@ -128,7 +128,7 @@ const Cart = () => {
                   <h3>Pagar con Tarjeta Débito / Crédito</h3>
                   <p className='price'>${total}</p>
                   <button onClick={handleBuy}>Redireccionar a Pago Seguro</button>
-                  {preferenceId && <Wallet initialization={{ preferenceId }} />}
+                  <div>{preferenceId && <Wallet initialization={{ preferenceId }} />}</div>
                 </div>
               </div>
             </div>

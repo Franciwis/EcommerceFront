@@ -1,46 +1,19 @@
-// import GinDb from "../../db/DestiladosDb/GinDb"
-// import PiscosDb from "../../db/DestiladosDb/PiscosDb"
-// import RonDb from "../../db/DestiladosDb/RonDb"
-// import VodkaDb from "../../db/DestiladosDb/VodkaDb"
-// import WhiskyDb from "../../db/DestiladosDb/WhiskyDb"
-// import TequilasDb from "../../db/DestiladosDb/tequilaDb"
-
-
-
-
-
-
-
-
-// const Destilados = () => {
-//   return (
-//     <>
-//       <PiscosDb />
-//       <TequilasDb />
-//       <RonDb />
-//       <VodkaDb />
-//       <WhiskyDb />
-//       <GinDb />
-//     </>
-//   )
-// }
-
-// export default Destilados
 
 
 
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
 import styles from "../../db/Products/styles.module.scss";
+import CardSkeleton from "../../components/CardSkeleton";
 
 const Destilados = () => {
   /* Traemos del context la funcion para agregar un producto */
-  const { addItemToCart, products } = useContext(CartContext);
+  const { addItemToCart, products, isLoading  } = useContext(CartContext);
 
   return (
     <div className={styles.productsContainer}>
-      {products &&
-      
+      {isLoading && <CardSkeleton cards={30} />}
+      {products &&      
         products.filter(products => products.category === "pisco" || products.category === "tequila" || products.category === "ron" || products.category === "vodka" || products.category === "whisky" || products.category === "gin").map((product, i) => (
           <div key={i} className={styles.product}>
             <img src={product.img} alt={product.name} />

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: "http://localhost:4000"
+    baseURL: "https://back-labotika.onrender.com"
 })
 
 export default axiosClient;
@@ -9,4 +9,3 @@ export default axiosClient;
 
 
 
-// baseURL: "http://localhost:8080"

@@ -2,8 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 
-// import axiosClient from "../config/axiosClient";
-// import productReducer from "./products/productReducer";
 
 
 /* Creamos el context, se le puede pasar un valor inicial */
@@ -13,16 +11,18 @@ export const CartProvider = ({ children }) => {
   /* Creamos un estado para el carrito */
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getProducts = async () => {
     await axios
-      .get("http://localhost:4000/products")
+      .get("https://back-labotika.onrender.com/products")
       .then(({ data }) => setProducts(data.products));
+                          setIsLoading(false);
   };
 
   const getProductsCart = async () => {
     return await axios
-      .get("http://localhost:4000/products-cart")
+      .get("https://back-labotika.onrender.com/products-cart")
       .then(({ data }) => setCartItems(data.productsCart))
       .catch((error) => console.error(error));
   };
@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
   const addItemToCart = async (product) => {
     const { name, img, price } = product;
 
-    await axios.post("http://localhost:4000/products-cart", { name, img, price });
+    await axios.post("https://back-labotika.onrender.com/products-cart", { name, img, price });
 
     getProducts();
     getProductsCart();
@@ -44,11 +44,11 @@ export const CartProvider = ({ children }) => {
   const editItemToCart = async (id, query, amount) => {
     if (query === "del" && amount === 1) {
       await axios
-        .delete(`http://localhost:4000/products-cart/${id}`)
+        .delete(`https://back-labotika.onrender.com/products-cart/${id}`)
         .then(({ data }) => console.log(data));
     } else {
       await axios
-        .put(`http://localhost:4000/products-cart/${id}?query=${query}`, {
+        .put(`https://back-labotika.onrender.com/products-cart/${id}?query=${query}`, {
           amount,
         })
         .then(({ data }) => console.log(data));
@@ -59,51 +59,13 @@ export const CartProvider = ({ children }) => {
   };
 
 
-  // 
-//   const initialState = {
-//     products: [],
-//     productById: [{
-//         _id: "",
-//         name: "",
-//         sku: "",
-//         price: 0,
-//         image: "",
-//         stock: ""
-//     }]
-// }
-
-//   const [productState, dispatch] = useReducer(productReducer, initialState)
-
-//   const getProductss = async() => {
-//     const response = await axiosClient.get("/products")
-//     const productos = response.data.info;
-    
-//     dispatch({
-//         type: "GET_PRODUCTS",
-//         payload: productos
-//     })
-// }
-
-//   const getProductById = async(_id) => {
-//     try {
-//         const response = await axiosClient.get(`/productById/${_id}`);
-//         const productInfo = response.data.product;
-
-//         dispatch({
-//             type: "GET_PRODUCT",
-//             payload: productInfo 
-//         })
-//     } catch (error) {
-//         console.log(error)
-//     }
-// } 
-  // 
+ 
 
 
   return (
     /* Envolvemos el children con el provider y le pasamos un objeto con las propiedades que necesitamos por value */
     <CartContext.Provider
-      value={{ cartItems, products, addItemToCart, editItemToCart}}
+      value={{ cartItems, products, addItemToCart, editItemToCart, isLoading}}
     >
       {children}
     </CartContext.Provider>
@@ -115,6 +77,6 @@ export default CartContext;
 
 
 
-// , getProducts, getProductById, productss: productState.products, product: productState.product
+
 
 

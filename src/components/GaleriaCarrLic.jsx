@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom"
+
 
 
 import { useContext } from "react";
@@ -14,9 +14,9 @@ const GaleriaCarrLic = () => {
 
   return (
 
-    <div  >  {/* className={styles.productsContainer} */}
+    <div  >  
       
-          <div  >  {/* className={styles.product} */}
+          <div  >  
             <section className="galeria-container">
               <div className="galeria">
                 {products &&
@@ -59,7 +59,7 @@ const GaleriaCarrLic = () => {
 
                 {products &&
                 products.filter(products => products.sku === "LIQ0007").map((product, i) => (
-                  <div id="v3" key={i}><div id="v3-i">
+                  <div id="v3" key={i}><div id="v3-i" className="arreglo">
                     <img src={product.img} alt={product.name} />
                     
                     <p>

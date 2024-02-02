@@ -66,7 +66,7 @@ export default function SignInSide() {
           md={7}
           className="imagen-login"
           sx={{
-            // backgroundImage: 'url(../../assets/fotos-galeria-categorias/bebidas-energeticas.png)',
+            
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -100,9 +100,9 @@ export default function SignInSide() {
                   autoFocus
                   onChange={handleChange}
                   type="text"
-                  placeholder="John Wick"
+                  placeholder=""
                   name="name"
-                  label="Name"
+                  label="Nombre"
                   value={user.name}
                 />
               )}
@@ -111,7 +111,7 @@ export default function SignInSide() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Email"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -123,7 +123,7 @@ export default function SignInSide() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Contraseña"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -141,7 +141,7 @@ export default function SignInSide() {
               <Grid container>
                 <Grid item>
                   <Button onClick={changeMode}>
-                    {signUp ? "Already have an account? Sign In" : "Don't have an account? Sign Up"}
+                    {signUp ? "Ya tienes una cuenta? Ingresa" : "Aún no tienes una cuenta?  Registrate"}
                   </Button>
                 </Grid>
               </Grid>

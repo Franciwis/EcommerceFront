@@ -1,19 +1,12 @@
-/* mientras trabajo */
-* {
-    /* background-color: bisque; */
+* {  
     margin: 0;
-    padding: 0;
-    
+    padding: 0; 
 }
-/* mientras trabajo */
+
 
 body {
   background-color: rgb(0, 0, 27) !important;
-  
 }
-
-
-
 
 
 
@@ -22,10 +15,8 @@ body {
   position: fixed;
   background: rgba(17, 17, 17, 0.9);
   padding: 20px;
-  /* text-align: center; */
-  /* border: 1px solid #ccc; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 3000;
   width: 100%;
   height: 100%;
   display: flex;
@@ -67,7 +58,6 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    /* position: fixed; */
     width: 100%;
 }
 
@@ -78,13 +68,14 @@ header {
     position: fixed;
     width: 100%;
     justify-content: space-between;
-    /* padding-right: 20px; */
     background-color: rgb(233, 233, 233);
     align-items: center;
     gap: 15px;
     z-index: 200;
     top: 0px;
     height: 60px;
+    font-size: large;
+    font-weight: 600;
 }
 
 .nav1-left {
@@ -96,7 +87,7 @@ header {
 }
 
 .botika {
-  background-image: url(./assets/Botika.jpg);
+  background-image: url(./assets/botikaOnline.jpg);
   width: 60px;
   height: 60px;
   background-position: center;
@@ -154,8 +145,6 @@ header {
     text-decoration: none;
     color: black;
     background-color: transparent;
-    /* margin-left: 50px;
-    margin-right: 50px; */
 }
 
 .text-link-2:hover {
@@ -172,7 +161,7 @@ header {
 }
 
 .imagen-login {
-  background-image: url(./assets/fotos-galeria-categorias/pisco.png);
+  background-image: url(https://thefoodtech.com/wp-content/uploads/2020/05/productos-diaego.jpg);
 }
 
 #ayuda-logo {
@@ -206,9 +195,6 @@ header {
     display: none;
     position: absolute;
     background-color: #fff;
-    /* min-width: 160px; */
-    /* min-width: 100%; */
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
     
   }
@@ -217,7 +203,7 @@ header {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    /* display: block; */
+    
     min-width: 100%;
   }
   
@@ -227,7 +213,6 @@ header {
   
   /*Muestra el menu cuando se hace hover*/
   .dropdown:hover .dropdown-content{
-    /* display: block; */
     display: flex;
     
   }
@@ -262,11 +247,6 @@ header {
     border-radius: 30px;
   }
 
-  /* prueba */
-  /* #nav3 {
-    background-color: #333;
-    padding: 10px;
-  } */
   
   ul {
     list-style-type: none;
@@ -298,15 +278,10 @@ header {
     top: 100px; /*Ajusta la posición según tus necesidades*/
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgb(3, 3, 41) !important;
     padding: 10px;
     box-sizing: border-box;
     z-index: 2; /* Asegura que el contenedor esté por encima del resto del contenido */
-    
-    /* probando transiciones */
-    /* transition-property: height;
-    transition-duration: 2s; */
-    /* transition: max-height 0.3s ease-out; */
     animation: navAnim 0.5s ease 0s 1 normal forwards;
   }
 
@@ -345,15 +320,20 @@ header {
   .galeria-container {
     margin: 0 auto;
     max-width: 1200px;
-    /* position: relative; */
   }
 
   .galeria {
     display: grid;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 59% 25% 25%;
     grid-template-rows: 50% 50%;
-    height: 650px;
-    gap: 3%;
+    max-height: 650px;
+    gap: 2%;
+    width: 88%;
+  }
+
+  #carrusel-cont {
+    width: 98%;
+    margin: 0 auto;
   }
 
   .v1 {
@@ -365,15 +345,12 @@ header {
   
 
   .v1 img{
-    height: 550px;
+    width: 100%;
+    height: auto;
     padding-bottom: 0px;  
   }
 
   .v1-i {
-    /* background-image: url(./assets/img/v1.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -391,7 +368,8 @@ header {
     color: #f0f0f0;
     border-radius: 10px;
     height: 40px;
-    width: 200px;
+    width: 40%;
+    margin-top: 10%;
   }
 
   #v2 {
@@ -401,16 +379,13 @@ header {
   }
 
   #v2 img{
-    height: 200px;
+    width: 70%;
+    height: auto;
     padding-bottom: 0px;
   
   }
 
   #v2-i {
-     /* background-image: url(./assets/img/v1.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -428,7 +403,7 @@ header {
     color: #f0f0f0;
     border-radius: 10px;
     height: 40px;
-    width: 200px;
+    width: 40%;
     z-index: 3;
     
   }
@@ -440,15 +415,12 @@ header {
   }
 
   #v3 img{
-    height: 200px;
+    width: 70%;
+    height: auto;
     padding-bottom: 0px;
   }
 
   #v3-i {
-     /* background-image: url(./assets/img/v1.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -457,7 +429,7 @@ header {
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     width: 100%;  
-    height: 108%;
+    height: 100%;
     text-align: center;
   }
 
@@ -466,7 +438,7 @@ header {
     color: #f0f0f0;
     border-radius: 10px;
     height: 40px;
-    width: 200px;
+    width: 40%;
     z-index: 3;
   }
 
@@ -477,15 +449,13 @@ header {
   }
 
   #v4 img{
-    height: 200px;
+    width: 70%;
+    height: auto;
     padding-bottom: 0px;
   }
 
   #v4-i {
-     /* background-image: url(./assets/img/v1.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 60%; */
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -503,7 +473,7 @@ header {
     color: #f0f0f0;
     border-radius: 10px;
     height: 40px;
-    width: 200px;
+    width: 40%;
     z-index: 3;
   }
   
@@ -514,15 +484,12 @@ header {
   }
 
   #v5 img{
-    height: 200px;
+    width: 70%;
+    height: auto;
     padding-bottom: 0px;
   }
 
   #v5-i {
-    /* background-image: url(./assets/img/v1.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -531,7 +498,7 @@ header {
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     width: 100%;  
-    height: 101%;
+    height: 100%;
     text-align: center;
   }
 
@@ -540,14 +507,17 @@ header {
     color: #f0f0f0;
     border-radius: 10px;
     height: 40px;
-    width: 200px;
-    /* z-index: 3; */
+    width: 40%;
   }
 
 
+  .arreglo img {
+    width: 83% !important;
+  }
 
-
-
+  .dest-arreglo img {
+    width: 80%;
+  }
 
 
 
@@ -728,6 +698,7 @@ footer {
   flex-direction: column;
   padding: 10px 100px;
   text-align: center;
+  align-items: center;
 }
 
 #footerIzq a {
@@ -739,6 +710,7 @@ footer {
 .socialmedia-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 10px 100px;
   border-left-style: dashed;
@@ -752,7 +724,7 @@ footer h6 {
 
 .socialmedia-container a {
   text-decoration: none;
-  color: #FFF;
+  color: #000000;
 }
 
 #rrss {
@@ -768,8 +740,16 @@ footer h6 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 10px 100px;
+}
+
+#payments {
+ 
+  width: 300px;
+  height: 150px;
+  
 }
 
 .footerReserva {
@@ -874,8 +854,12 @@ footer h6 {
   #cont-blog img {
     
      width: 100%;
-     /* max-width: 100%; */
+     max-width: 100%;
      height: auto;
+  }
+
+  .galeria-container {
+    font-size: 14px;
   }
 }
 
@@ -910,7 +894,31 @@ footer h6 {
 
 
 
-@media (max-width: 991px) {
+@media (max-width: 990px) {
+  
+
+  #navres {
+    display: block !important;
+    top: -100px;
+    background-color: rgb(233, 233, 233) !important;
+  }
+
+  #listaRes {
+    display: flex !important;
+    align-items: flex-end !important;
+
+  }
+
+  #lupaRes {
+    margin-right: 10px;
+  }
+ 
+
+
+  #nav1 {
+    display: none;
+  }
+
   .nav1-left {
     display: flex;
     align-items: center;
@@ -928,10 +936,18 @@ footer h6 {
     justify-content: center;
     align-items: center;
     background-color: rgb(134, 220, 241);
-    margin-top: 60px;
+    margin-top: -100px;
     gap: 0%;
     height: 60px;
     font-size: 10px;
+    
+}
+
+.new-container {
+  display: none;
+  position: fixed;
+  top: 150px; /*Ajusta la posición según tus necesidades*/
+  
 }
 
   #carouselHome {
@@ -947,21 +963,65 @@ footer h6 {
     font-size: 30px;
     text-align: center;
   }
+
+  .galeria-container {
+    font-size: 12px;
+  }
 }
 
 
 @media (max-width: 650px) {
-  /* .nav-res {
-    display: block;
-    position: relative;
-    z-index: 10000;
-    margin-top: 200px;
-  } */
+ 
 
   #nav2 {
-    visibility: hidden;
+    display: none;
     margin-top: 10px;
   }
+
+  .input {
+    width: 230px !important;
+    border-radius: 50px;
+    max-height: 100px !important;
+    border: #000;
+    
+  }
+
+  .buscador {
+    
+    padding: 20px;
+    
+    z-index: 1000;
+    width: 80% !important;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F9F1EF;
+    overflow: auto;
+  }
+  .galeria-container {
+    font-size: 10px;
+  }
+
+  #carousel-titles {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    gap: 0px 0px;
+    
+
+}
+#carousel-titles button{
+  font-size: 12px;
+  gap: 0;
+  margin: 10px;
+}
+
 }
 
 
@@ -1016,7 +1076,18 @@ footer h6 {
     width: 100%;
 
     
-}
+  }
+
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
+    
+  
+  }
+  
 }
 
 
@@ -1093,17 +1164,15 @@ footer h6 {
 
 /* Search */
 
-.age-gate2 {
+.buscador {
   position: fixed;
   background-color: rgba(0, 0, 27, 0.808);
   padding: 20px;
-  /* text-align: center; */
-  /* border: 1px solid #ccc; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   width: 55%;
   height: 55%;
-  /* display: flex; */
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1143,7 +1212,7 @@ footer h6 {
 }
 
 .input-button {
-  /* border-radius: 20px; */
+ 
   border: none;
 }
 
@@ -1211,76 +1280,6 @@ footer h6 {
 }
 
 
-/* NavbarRes.css */
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 15px 20px;
-}
-
-.nav9 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo9 {
-  font-size: 24px;
-}
-
-.navbar9 {
-  list-style: none;
-  display: flex;
-}
-
-.navbar9 li {
-  margin-right: 20px;
-}
-
-.navbar9 a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-.menu-toggle9 {
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .navbar9 {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-  }
-
-  .navbar9 .show {
-      display: flex;
-  }
-
-  .navbar9 li {
-      margin: 0;
-      text-align: center;
-      padding: 10px;
-      border-bottom: 1px solid #555;
-  }
-
-  .menu-toggle9 {
-      display: block;
-  }
-} */
 
 
 
@@ -1289,7 +1288,7 @@ header {
 
 #cont-blog {
   display: flex;
-  margin: 100px 20px;
+  margin: 100px auto;
 }
 
 #cont-blog img {
@@ -1320,7 +1319,6 @@ header {
 }
 
 .blog-orden {
-  /* width: 50%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1330,21 +1328,108 @@ header {
 .que-son {
   width: 50%;
   display: flex;
-  /* justify-self: center; */
   margin-bottom: 40px;
 }
 
-/* .blog-orden .img {
-  width: 600px;
-} */
+
+@media (max-width: 1600px) {
+  .blog-recetas {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .blog-recetas img {
+    width: 50% !important;
+    height: auto !important;
+  }
+
+  .blog-orden {
+    align-items: center;
+    margin: 100px 0;
+  }
+
+  .card {
+    display: flex !important;
+    flex-direction: row !important;
+    
+  }
+
+  .card img {
+    width: 50%;
+    height: auto;
+  }
+
+  .card Card.Body {
+    width: 50%;
+    height: auto;
+  }
+
+  .que-son {
+    width: 95%;
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .blog-orden {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .card {
+    display: flex !important;
+    flex-direction: column !important;
+    
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .blog-recetas img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+}
+
+
+
 
 .blog-recetas {
   display: flex;
-  /* align-items: center; */
-  
+ 
 }
 
 .blog-recetas .img-recetas {
   width: 500px;
   height: 300px;
+}
+
+
+
+
+
+
+/* responsive nav */
+#navres {
+  margin-top: 100px !important;
+  display: none;
+}
+
+/* Skeleton */
+.card-skeleton {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 26px 20px 14px;
 }

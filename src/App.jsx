@@ -4,24 +4,6 @@ import AppRoutes from './routes/AppRoutes'
 
 
 
-// function App() {
-
-//   return (
-//     <>
-//       <AppRoutes />
-//     </>
-//   )
-// }
-
-// export default App
-
-
-
-
-
-
-// App.js
-
 import  { useState } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 
@@ -44,7 +26,4 @@ const App = () => {
 };
 
 export default App;
-
-
-
 
